@@ -3,8 +3,6 @@
 from mnemonic import Mnemonic
 from sha3 import sha3_256
 
-from pylibra.wallet.account import Account
-
 
 MNEMONIC = Mnemonic("english")
 words = MNEMONIC.generate(128)
