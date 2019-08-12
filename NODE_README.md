@@ -26,6 +26,8 @@ p2p的配置
 	listen_address = "/ip4/0.0.0.0/tcp/37993"
 	advertised_address = "/ip4/0.0.0.0/tcp/37993"
 
+
+
 #### 2. peer位置 trusted_peers.config.toml
 
 修改每个 seed_peer的服务器地址
