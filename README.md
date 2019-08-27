@@ -1,7 +1,6 @@
 
 
 
-
 # Libra网络搭建流程
 
 
@@ -29,6 +28,10 @@ PS： master分支的支持我们很快就会更新
 
 
 #### 生成创建 peer节点的seed
+
+进入 generate-libra-nodes 目录
+
+    $ cd generate-libra-nodes
 
 使用 create_seed.py 创建peer seed
 
