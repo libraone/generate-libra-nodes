@@ -1,25 +1,24 @@
-# 启动Libra Node 接入测试网
+# Libra Node startup Guide
 
 
 
-#### 1. 节点配置 node.config.toml
+#### 1. Setup node.config.toml
 
 
-
-修改节点数据保存路径
+Change data path:
 
     [base]
     data_dir_path = "./data"
 
 
-adminssion_control的gRPC api配置:
+Change adminssion_control's gRPC address config:
 
 
     [admission_control]
     address = "0.0.0.0"
     admission_control_service_port = 46091
 
-p2p的配置
+Change p2p config:
 
 	[network]
 	seed_peers_file = "seed_peers.config.toml"
@@ -28,30 +27,32 @@ p2p的配置
 
 
 
-#### 2. peer位置 trusted_peers.config.toml
+#### 2. Change peer address on trusted_peers.config.toml
 
-修改每个 seed_peer的服务器地址
+Change seed_peer's address:
 
 	1e5d5a74b0fd09f601ac0fca2fe7d213704e02e51943d18cf25a546b8416e9e1 = ["/ip4/192.168.1.120/tcp/37993"]
 
 
 
-#### 3. 启动节点
+#### 3. Start libra_node
 
-编译，进入libra源码目录，执行下面命令编译
+Build libra_node program on libra source:
 
-	cargo build -p libra_node --release
+    $ cd libra
+    $ cargo build -p libra_node
 
 
-回到node目录，设置libra的项目目录，修改 start_node.sh中的 LIBRA_SOURCE 为libra源码目录
+Back to node's config directory, setup libra source path. Change LIBRA_SOURCE valule on start_node.sh
+
 
 	LIBRA_SOURCE=<path_to_libra>
 
-执行启动命令
+execute start_node.sh
 
-	./start_node.sh
+	$ ./start_node.sh
 
 
-#### 4. 发起 mint 交易
+#### 4. submit mint transaction
 
-	faucet_key就是可以mint账户的私钥，可以再启动客户端或sdk中设置这个值，就可以调用mint交易
+	The faucet_key file is the private key of mint account. You can set this value when start libra_client or libra sdk, then could invoke mint transaction.
