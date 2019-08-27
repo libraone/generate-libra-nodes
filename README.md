@@ -6,25 +6,25 @@
 
 #### Build libra source:
 
-Because the libra source is updated very quickly. This version only supports Libra's testnet branch. Please download the libra source code and execute the following command to switch branches.
+Due to the frequent libra source updates, this version supports Libra's testnet branch. Please download the libra source code and execute the following command to switch branches.
 
 
     $ git checkout testnet
-    
-Build comamnds that used by generate-libra-nodes:
+
+Build libra commands that  generate-libra-nodes need:
 
     $ cargo build
 
-PS： master version of generate-libra-nodes will update soon.
+PS： master version of generate-libra-nodes will be updated soon.
 
 
-#### Install Independence:
+#### Install python3 rely:
 
 	sudo pip3 install sha3
 	sudo pip3 install mnemonic
 	sudo apt install jq
 
-#### generate peer's seed
+#### Generate peer's seed
 
 enter generate-libra-nodes directory:
 
@@ -49,16 +49,17 @@ output dda068eec093f40053d737564b8be5d6455f543330b745195379191e6e6bb03a is the s
 
 - LIBRA_SOURCE： libra source directory
 - NODE_NUM： number of peer nodes
-- PEER_SEED： seed value that create by create_seed.py on last step
+- PEER_SEED： seed value created by create_seed.py on last step
 
-#### Execute generate node script
+#### Execute generate node command 
 
 	$ generate_nodes.sh
 
-The nodes' config files will put on directory nodes:
+The config' file of the generated node is in the nodes directory.
 
     node-12ef71a8e1c51c4c5abaaabc7d76be85296dbed6632f8f6087d17bf24e24030c
     node-3141d7ff54ea8318041447898eceaeea4cde1c344c6732d60b7d4bf231ebee19
 
-Then you can copy every node's direcotry to node's server, change setup and startup libra_node program, by followwing the README.md in the node's config directory.
+Then transfer each node directory to the corresponding server, modify the configuration according to the README.md tutorial operation in the directory, and start the node.
+
 

@@ -57,3 +57,4 @@ execute start_node.sh
 #### 4. submit mint transaction
 
 	The faucet_key file is the private key of mint account. You can set this value when start libra_client or libra sdk, then could invoke mint transaction.
+
