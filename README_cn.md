@@ -1,43 +1,42 @@
 
 
-# generate-libra-nodes Guide
+# Libra网络搭建流程
 
-[中文版](README_cn.md)
+[English](README.md)
 
+#### 编译libra源码
 
-#### Build libra source:
-
-Because the libra source is updated very quickly. This version only supports Libra's testnet branch. Please download the libra source code and execute the following command to switch branches.
-
+因为官方代码更新很快。这个版本只支持libra的 testnet 分支节点搭建。请下载libra源码后，执行下面命令切换分支
 
     $ git checkout testnet
     
-Build comamnds that used by generate-libra-nodes:
+然后根据执行下面命令libra
 
     $ cargo build
 
-PS： master version of generate-libra-nodes will update soon.
+PS： master分支的支持我们很快就会更新
 
 
-#### Install Independence:
+#### 安装 python3 依赖:
 
 	sudo pip3 install sha3
 	sudo pip3 install mnemonic
 	sudo apt install jq
 
-#### generate peer's seed
 
-enter generate-libra-nodes directory:
+#### 生成创建 peer节点的seed
+
+进入 generate-libra-nodes 目录
 
     $ cd generate-libra-nodes
 
-create peer seed:
+使用 create_seed.py 创建peer seed
 
 	$ python ./create_seed.py
 	
 	dda068eec093f40053d737564b8be5d6455f543330b745195379191e6e6bb03a
 
-output dda068eec093f40053d737564b8be5d6455f543330b745195379191e6e6bb03a is the seed value
+输出的dda068eec093f40053d737564b8be5d6455f543330b745195379191e6e6bb03a 就是seed值
 
 #### 配置 00_CONFIG.conf
 
@@ -48,18 +47,17 @@ output dda068eec093f40053d737564b8be5d6455f543330b745195379191e6e6bb03a is the s
         }
 
 
-- LIBRA_SOURCE： libra source directory
-- NODE_NUM： number of peer nodes
-- PEER_SEED： seed value that create by create_seed.py on last step
+- LIBRA_SOURCE： libra的源码目录
+- NODE_NUM： 生成peer的数量
+- PEER_SEED： 节点的id的seed， 使用上面一步的create_seed.py创建的值
 
-#### Execute generate node script
+#### 执行创建节点命令
 
-	$ generate_nodes.sh
+	generate_nodes.sh
 
-The nodes' config files will put on directory nodes:
+生成节点的配置文件在nodes目录下
 
     node-12ef71a8e1c51c4c5abaaabc7d76be85296dbed6632f8f6087d17bf24e24030c
     node-3141d7ff54ea8318041447898eceaeea4cde1c344c6732d60b7d4bf231ebee19
 
-Then you can copy every node's direcotry to node's server, change setup and startup libra_node program, by followwing the README.md in the node's config directory.
-
+然后分别将个各节点目录传送到对应的服务器，根据目录中的README.md教程操作，修改配置，启动节点
