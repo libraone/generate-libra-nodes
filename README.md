@@ -1,6 +1,26 @@
-## Libra网络搭建流程
 
-安装 python3 依赖:
+
+
+
+# Libra网络搭建流程
+
+
+#### 编译libra源码
+
+
+
+因为官方代码更新很快。这个版本只支持libra的 testnet 分支节点搭建。请下载libra源码后，执行下面命令切换分支
+
+    $ git checkout testnet
+    
+然后根据执行下面命令libra
+
+    $ cargo build
+
+PS： master分支的支持我们很快就会更新
+
+
+#### 安装 python3 依赖:
 
 	sudo pip3 install sha3
 	sudo pip3 install mnemonic
