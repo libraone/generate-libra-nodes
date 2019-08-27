@@ -1,5 +1,6 @@
 # 启动Libra Node 接入测试网
 
+[English](NODE_README.md)
 
 
 #### 1. 节点配置 node.config.toml

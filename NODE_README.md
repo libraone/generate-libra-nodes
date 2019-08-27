@@ -1,5 +1,6 @@
 # Libra Node startup Guide
 
+[中文版](NODE_README_cn.md)
 
 
 #### 1. Setup node.config.toml
