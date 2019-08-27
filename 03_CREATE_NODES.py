@@ -41,7 +41,7 @@ for file_name in files:
         os.system('echo LIBRA_SOURCE=\<path_to_libra\> > ' + start_node_path)
         os.system('echo PEER_ID=' + peer_id + ' >>' + start_node_path)
         os.system('echo "">>' + start_node_path)
-        os.system('echo \${LIBRA_SOURCE}/target/release/libra_node -f \${PEER_ID}.node.config.toml -p \${PEER_ID}>>' + start_node_path)
+        os.system('echo \${LIBRA_SOURCE}/target/debug/libra_node -f \${PEER_ID}.node.config.toml -p \${PEER_ID}>>' + start_node_path)
         os.system('chmod 755 ' + start_node_path)
         os.system('cp NODE_README.md ' + node_dir + '/README.md')
         print('create ' + node_dir)
