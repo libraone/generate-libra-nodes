@@ -22,6 +22,7 @@ PS： master version of generate-libra-nodes will be updated soon.
 
 	sudo pip3 install sha3
 	sudo pip3 install mnemonic
+	sudo pip3 install pysha3
 	sudo apt install jq
 
 #### Generate peer's seed

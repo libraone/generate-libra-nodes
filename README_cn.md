@@ -21,6 +21,7 @@ PS： master分支的支持我们很快就会更新
 
 	sudo pip3 install sha3
 	sudo pip3 install mnemonic
+	sudo pip3 install pysha3
 	sudo apt install jq
 
 
