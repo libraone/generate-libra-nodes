@@ -1,5 +1,4 @@
 
-
 # generate-libra-nodes Guide
 
 [中文版](README_cn.md)
@@ -39,7 +38,7 @@ create peer seed:
 
 output dda068eec093f40053d737564b8be5d6455f543330b745195379191e6e6bb03a is the seed value
 
-#### 配置 00_CONFIG.conf
+#### Setup 00_CONFIG.conf
 
         {
             "LIBRA_SOURCE": "\/home\/name\/new-libra\/libra",
