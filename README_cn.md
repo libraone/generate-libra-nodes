@@ -1,14 +1,11 @@
 
-
 # Libra网络搭建流程
 
 [English](README.md)
 
 #### 编译libra源码
 
-因为官方代码更新很快。这个版本只支持libra的 testnet 分支节点搭建。请下载libra源码后，执行下面命令切换分支
-
-    $ git checkout testnet
+现在可以在 libra源码的master分支下运行了。
     
 然后根据执行下面命令libra
 
