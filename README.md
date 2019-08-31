@@ -1,4 +1,3 @@
-
 # generate-libra-nodes Guide
 
 [中文版](README_cn.md)
@@ -6,10 +5,7 @@
 
 #### Build libra source:
 
-Due to the frequent libra source updates, this version supports Libra's testnet branch. Please download the libra source code and execute the following command to switch branches.
-
-
-    $ git checkout testnet
+Now generate-libra-nodes could run with the master branch of libra.
 
 Build libra commands that  generate-libra-nodes need:
 
